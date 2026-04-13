@@ -9,7 +9,7 @@ function injectHeader()
     fetch("/pages/templates/header.html")
     .then(response => response.text())
     .then(data => {
-        document.body.insertAdjacentHTML("afterbegin", data);
+        document.body.insertAdjacentHTML("beforebegin", data);
     });
 }
 
@@ -19,6 +19,6 @@ function injectFooter()
     fetch("/pages/templates/footer.html")
     .then(response => response.text())
     .then(data => {
-        document.body.insertAdjacentHTML("beforeend", data);
+        document.body.insertAdjacentHTML("afterend", data);
     });
 }

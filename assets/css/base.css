@@ -16,12 +16,24 @@ body, header, footer
 
     font-family: "Helvetica";
 
-    background-color: rgb(39, 39, 39);
+    background-color: rgb(255, 255, 255);
+}
+
+header, footer
+{
+    background-color: white;
+    z-index: 999;
+    box-shadow: 2px 2px 16px black;
 }
 
 header
 {
-    background-color: white;
+    margin-bottom: 18px;
+}
+
+footer
+{
+    margin-top: 18px;
 }
 
 body, header, footer, p, div > *
@@ -30,17 +42,34 @@ body, header, footer, p, div > *
     /*border: 1px red solid; */ 
 }
 
+body
+{
+    /*background-color: rgb(255, 255, 255);
+    background: linear-gradient(to bottom, rgb(199, 228, 244), rgb(193, 235, 248));
+    */
+    background-image: url('/assets/images/pictures/DSC_0944.webp');
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+footer
+{
+    padding: 16px;
+}
+
 .body-container
 {
     display: flex;
     flex-direction: column;
     justify-content: left;
+    gap: 16px;
 }
 
 .body-block
 {
-    padding: 4px;
-    background-color: rgb(182, 178, 178);
+    border-radius: 25px;
+    background-color: rgba(255, 255, 255, 0.75);
+    padding: 16px;
 }
 
 .body-block-content
@@ -50,7 +79,7 @@ body, header, footer, p, div > *
 
 .body-block-content p
 {
-    margin-bottom: 4px;
+    margin-bottom: 1rem;
 }
 
 .link-format > *
@@ -64,6 +93,7 @@ body, header, footer, p, div > *
 {
     background-position: left;
     background-size: cover;
+    border-radius: 16px;
 }
 
 .body-block-grid
@@ -92,6 +122,11 @@ body, header, footer, p, div > *
     align-content: center;
     word-break: keep-all;
     word-wrap: normal;
+}
+
+.list-two-rows
+{
+    grid-template-columns: 1fr 1fr;
 }
 
 .content-width
@@ -142,4 +177,69 @@ p
 {
     margin-top: 2px; 
     margin-bottom: 2px; 
+}
+
+/* Page Formatting */
+
+.simple-flex-row
+{
+    display: flex; 
+    flex-direction: row;
+}
+
+/* Grids and images */
+.grid-four
+{
+    display: grid;
+    grid-template-columns: auto auto;
+
+    width: 100%;
+
+    gap: 8px;
+}
+
+.grid-two
+{
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+
+.grid-images-contain div
+{
+    width: auto;
+    height: 386px;
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    transition: transform 0.25s;
+    animation: transform cubic-bezier(1, 0, 0, 1);
+
+    border-radius: 16px;
+}
+
+.grid-images-contain div:hover
+{
+    transform: scale(1.5);
+}
+
+.grid-one
+{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr 0.5fr;
+
+    width: 100%;
+    height: 386px;
+
+    gap: 8px;
+}
+
+.grid-images div
+{
+    width: 100%;
+    height: 320px;
+    background-size:cover;
+    background-position: center;
+
+    border-radius: 16px;
 }
