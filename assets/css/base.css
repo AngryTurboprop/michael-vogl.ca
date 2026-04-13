@@ -1,0 +1,145 @@
+/* General Styles */
+.flex-centered
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Master Content Width */
+body, header, footer
+{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-items: center;
+
+    font-family: "Helvetica";
+
+    background-color: rgb(39, 39, 39);
+}
+
+header
+{
+    background-color: white;
+}
+
+body, header, footer, p, div > *
+{
+    /* DEBUG */
+    /*border: 1px red solid; */ 
+}
+
+.body-container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+
+.body-block
+{
+    padding: 4px;
+    background-color: rgb(182, 178, 178);
+}
+
+.body-block-content
+{
+    margin: 32px;
+}
+
+.body-block-content p
+{
+    margin-bottom: 4px;
+}
+
+.link-format > *
+{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.body-block-image
+{
+    background-position: left;
+    background-size: cover;
+}
+
+.body-block-grid
+{
+    display: grid;
+    min-height: 236px;
+}
+
+.grid-left
+{
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.grid-right
+{
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.side-by-side-list
+{
+    padding-left: 32px;
+    min-width: fit-content;
+    max-width: 386px;
+    display: grid;   
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+.content-width
+{
+    width: 60vw;
+}
+
+/* Header Stuff */
+.header-container
+{
+}
+
+.header-content
+{
+    margin: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-navbar
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-navbar div
+{
+    display: flex;
+    padding: 4px 8px 4px 8px;
+    text-align: center;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Footer Formatting */
+
+/* Body Formatting */
+h2
+{
+    margin-top: 2px;
+    margin-bottom: 4px;
+}
+
+p
+{
+    margin-top: 2px; 
+    margin-bottom: 2px; 
+}

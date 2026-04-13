@@ -1,0 +1,20 @@
+@font-face {
+    font-family: "Helvetica";
+    src: url("HelveticaLTStd-Roman.otf");
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url("HelveticaLTStd-Bold.otf");
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url("HelveticaLTStd-BoldObl.otf");
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: "Helvetica";
+    src: url("HelveticaLTStd-Blk.otf");
+    font-weight: 1000;
+}
