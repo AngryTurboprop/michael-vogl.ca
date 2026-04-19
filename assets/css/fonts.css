@@ -14,7 +14,7 @@
     font-style: italic;
 }
 @font-face {
-    font-family: "Helvetica";
+    font-family: "Helvetica-Bk";
     src: url("HelveticaLTStd-Blk.otf");
-    font-weight: 1000;
+    font-weight: bolder;
 }
