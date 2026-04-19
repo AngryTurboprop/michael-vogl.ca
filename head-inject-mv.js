@@ -18,9 +18,17 @@ if (document.readyState === "loading") {
     <base href="${baseHref}">`);
 
     let siteVersion = 0;
-    if (typeof siteConfig !== 'undefined')
+    try
     {
+        console.log(siteConfig);
         siteVersion = siteConfig;
+    }
+    catch (error)
+    {
+        if (error instanceof TypeError)
+        {
+            siteVersion = 0;
+        }
     }
 
     injectIndex(siteVersion);

@@ -32,6 +32,7 @@ header, footer
     align-items: center;
     justify-content: center;
     position: absolute;
+    overflow:hidden;
 }
 
 body

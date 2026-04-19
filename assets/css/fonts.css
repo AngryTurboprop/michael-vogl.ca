@@ -1,20 +1,46 @@
+/* Helvetica */
 @font-face {
     font-family: "Helvetica";
-    src: url("HelveticaLTStd-Roman.otf");
+    src: url("/assets/fonts/HelveticaLTStd-Roman.otf");
 }
 @font-face {
     font-family: "Helvetica";
-    src: url("HelveticaLTStd-Bold.otf");
+    src: url("/assets/fonts/HelveticaLTStd-Bold.otf");
     font-weight: bold;
 }
 @font-face {
     font-family: "Helvetica";
-    src: url("HelveticaLTStd-BoldObl.otf");
+    src: url("/assets/fonts/HelveticaLTStd-BoldObl.otf");
     font-weight: bold;
     font-style: italic;
 }
 @font-face {
     font-family: "Helvetica-Bk";
-    src: url("HelveticaLTStd-Blk.otf");
+    src: url("/assets/fonts/HelveticaLTStd-Blk.otf");
     font-weight: bolder;
+}
+/* Roboto */
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Medium.ttf");
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Bold.ttf");
+    font-weight:bold;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-MediumItalic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Roboto";
+    src: url("/assets/fonts/Roboto-Black.ttf");
+    font-weight: 1000;
+}
+@font-face {
+    font-family: "Roboto Condensed";
+    src: url("/assets/fonts/RobotoCondensed-Bold.ttf");
+    font-weight: bold;
 }
