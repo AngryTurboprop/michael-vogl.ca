@@ -9,42 +9,194 @@
 
 <body>
     <div class="fixed-bg img-code-one">
-        <div class="card-blue featured-card link-format">
-            <div class="featured-card-title">
-                <div>
-                    <h3>Honk! Ranger Rush</h3>
-                    <span>Algonquin College Capstone Project</span>
+        <div class="featured-carousel-container">
+            <div id="card-1" class="card-blue featured-card link-noformat active">
+                <div class="featured-card-title">
+                    <div>
+                        <h3>Honk! Ranger Rush</h3>
+                        <span>Algonquin College Capstone Project</span>
+                    </div>
+                    <a href="/pages/main/projects.html#honk"><div class="featured-card-button">SEE MORE</div></a>
                 </div>
-                <div class="featured-card-button">SEE MORE</div>
+                <div class="featured-card-image" style="background-image:url('/assets/images/honkgame/honkgame_1.png')"></div>
             </div>
-            <div class="featured-card-image" style="background-image:url('/assets/images/honkgame/honkgame_1.png')"></div>
+            <div id="card-2" class="card-green featured-card link-noformat">
+                <div class="featured-card-title">
+                    <div>
+                        <h3>Web Development</h3>
+                        <span>Websites that I've worked on</span>
+                    </div>
+                    <a href="/pages/main/additionalwork.html#websites"><div class="featured-card-button">SEE MORE</div></a>
+                </div>
+                <div class="featured-card-image" style="background-image:url('/assets/images/pictures/DSC_9562.webp')"></div>
+            </div>
+            <div id="card-3" class="card-orange featured-card link-noformat">
+                <div class="featured-card-title">
+                    <div>
+                        <h3>My Other Projects</h3>
+                        <span>Other projects showcasing my abilities</span>
+                    </div>
+                    <a href="/pages/main/additionalwork.html#mods"><div class="featured-card-button">EXPLORE</div></a>
+                </div>
+                <div class="featured-card-image" style="background-image:url('/assets/images/repaint/kfclmp2_1.png')"></div>
+            </div>
+            <div class="featured-carousel-selector-bar">
+                <div id="selector-bar-1" class="active"></div>
+                <div id="selector-bar-2" class="inactive"></div>
+                <div id="selector-bar-3" class="inactive"></div>
+            </div>
         </div>
     </div>
     <div class="body-wrapper">
         <div class="body-content flex-center">
             <div class="content-width intro-section">
                 <div class="intro-hi">Hi, I'm Michael</div>
-                <div class="body-block-content intro-body" style="padding:0;">
+                <div class="intro-body" style="padding:0;">
                     <p>I'm a graduate of Algonquin College's Game Development program. I have a passion for problem-solving and designing efficient, clean systems and frameworks in software.</p>
                     <p>For as long as I can remember, I've been tinkering with computers; I love tackling new challenges and learning new things. I made this site to show some of my projects and portfolio work.</p>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="recessed-area">
-                <div class="content-width">
-                    <div class="grid-showcase">
-                        <div class="body-block link-format">
-                            <h3>Honk! Ranger Rush</h3>
-                            <div class="body-block-image" style="height: 256px; background-image:url('/assets/images/honkgame/honkgame_1.png')"></div>
-                            <a href="/pages/main/projects.html">
-                                <div class="button-big">
-                                    See More
-                                </div>
-                            </a>
+    <div class="fixed-bg bg-fit img-code-two">
+        <div class="recessed-area">
+            <div class="content-width gap">
+                <div class="body-block body-block-grid grid-left">
+                    <div class="body-block-content">
+                        <h2>Programing</h2>
+                        <p>Self-taught and as a part of my education, I've become proficient in a variety of programming languages, including:</p>
+                        <div class="side-by-side-list">
+                            <ul>
+                                <li>C#</li>
+                                <li>C++</li>
+                                <li>Python</li>
+                            </ul>
+                            <ul>
+                                <li>HTML</li>
+                                <li>CSS</li>
+                                <li>JavaScript</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="body-block-image" style="background-image: url('/assets/images/pictures/DSC_9562.webp')"></div>
+                </div>
+                <div class="body-block body-block-grid grid-right">
+                    <div class="body-block-image" style="background-image: url('/assets/images/pictures/DSC_9566.webp')"></div>
+                    <div class="body-block-content">
+                        <h2>Software</h2>
+                        <p>I have experience in the following engines and programs:</p>
+                        <div class="side-by-side-list">
+                            <ul>
+                                <li>Unity</li>
+                                <li>Unreal</li>
+                            </ul>
+                            <ul>
+                                <li>Blender</li>
+                                <li>3DS Max</li>
+                            </ul>
+                            <ul>
+                                <li>Adobe Photoshop</li>
+                                <li>Adobe Audition</li>
+                                <li>Adobe Illustrator</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script>
+        let activeCarouselIndex = 1;
+        let carouselRestarting = false;
+        var carouselTimer = setInterval(cycleCarousel, 4000);
+
+        function cycleCarousel() {
+            activeCarouselIndex += 1;
+            
+            if (activeCarouselIndex > 3)
+            {
+                activeCarouselIndex = 1;
+            }
+
+            activateCarousel(activeCarouselIndex, false);
+        }
+
+        function stopCarousel()
+        {
+            clearInterval(carouselTimer);
+            carouselTimer = null;
+        }
+
+        function restartCarousel(newInterval = 3000)
+        {
+            if (!carouselRestarting)
+            {
+                carouselRestarting = true;
+                setTimeout(() =>
+                {
+                    stopCarousel();
+                    carouselTimer = setInterval(cycleCarousel, 4000);
+                    carouselRestarting = false;
+                }, newInterval)
+            }
+        }
+
+        document.addEventListener("DOMContentLoaded", (event) => {
+            document.getElementById("selector-bar-1").addEventListener("click", (event) => { activateCarousel(1, true) });
+            document.getElementById("selector-bar-2").addEventListener("click", (event) => { activateCarousel(2, true) });
+            document.getElementById("selector-bar-3").addEventListener("click", (event) => { activateCarousel(3, true) });
+
+            document.getElementById("card-1").addEventListener("mouseenter", (event) => { stopCarousel() });
+            document.getElementById("card-2").addEventListener("mouseenter", (event) => { stopCarousel() });
+            document.getElementById("card-3").addEventListener("mouseenter", (event) => { stopCarousel() });
+
+            document.getElementById("card-1").addEventListener("mouseleave", (event) => { restartCarousel(500) });
+            document.getElementById("card-2").addEventListener("mouseleave", (event) => { restartCarousel(500) });
+            document.getElementById("card-3").addEventListener("mouseleave", (event) => { restartCarousel(500) });
+        });
+
+        function activateCarousel(carouselIndex, userInteracted = false) {
+
+            if (carouselIndex == 1)
+            {
+                document.getElementById("card-1").classList.add("active");
+                document.getElementById("card-2").classList.remove("active");
+                document.getElementById("card-3").classList.remove("active");
+
+                document.getElementById("selector-bar-1").classList.add("active");
+                document.getElementById("selector-bar-2").classList.remove("active");
+                document.getElementById("selector-bar-3").classList.remove("active");
+            }
+            else if (carouselIndex == 2)
+            {
+                document.getElementById("card-1").classList.remove("active");
+                document.getElementById("card-2").classList.add("active");
+                document.getElementById("card-3").classList.remove("active");
+
+                document.getElementById("selector-bar-1").classList.remove("active");
+                document.getElementById("selector-bar-2").classList.add("active");
+                document.getElementById("selector-bar-3").classList.remove("active");
+            }
+            else if (carouselIndex == 3)
+            {
+                document.getElementById("card-1").classList.remove("active");
+                document.getElementById("card-2").classList.remove("active");
+                document.getElementById("card-3").classList.add("active");
+
+                document.getElementById("selector-bar-1").classList.remove("active");
+                document.getElementById("selector-bar-2").classList.remove("active");
+                document.getElementById("selector-bar-3").classList.add("active");
+            }
+
+            if (userInteracted)
+            {
+                stopCarousel();
+                restartCarousel(3000);
+            }
+
+            activeCarouselIndex = carouselIndex;
+        }
+    </script>
 </body>

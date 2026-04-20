@@ -13,6 +13,7 @@ html
 {
     background-color: #2c2c2c;
     color: #242424;
+    font-family: "Roboto", sans-serif;
 }
 
 .content-width
@@ -184,6 +185,11 @@ footer h4
 
 
 /* General Stylings */
+.link-noformat a
+{
+    text-decoration: none;
+    color: black;
+}
 
 .link-format a
 {
@@ -205,7 +211,7 @@ footer h4
     display:flex;
     justify-content: center;
 
-    padding: 32px;
+    padding: 128px 0px 64px 0px;
 }
 
 /* Flex Stylings */
@@ -226,6 +232,82 @@ footer h4
 .flex-column
 {
     flex-direction: column;
+}
+
+/* Grid Showcase Things */
+.body-block
+{
+    border-radius: 12px;
+    overflow:hidden;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.232);
+
+    font-size: 1.1rem;
+
+    background-color:#FFFFFF;
+}
+
+.body-block-image
+{
+    background-position: left;
+    background-size: cover;
+
+    height: 100%;
+}
+
+.body-block-content
+{
+    margin: 32px;
+}
+
+.body-block-content p
+{
+    margin-bottom: 1rem;
+}
+
+.body-block-grid
+{
+    display: grid;
+    min-height: 236px;
+}
+
+.body-block h3
+{
+    padding-bottom: 4px;
+    margin-bottom: 4px;
+}
+
+.gap
+{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.grid-left
+{
+    grid-template-columns: 1.5fr 1fr;
+}
+
+.grid-right
+{
+    grid-template-columns: 1fr 1.5fr;
+}
+
+.side-by-side-list
+{
+    padding-left: 32px;
+    min-width: fit-content;
+    max-width: 386px;
+    display: grid;   
+    grid-template-columns: 1fr 1fr 1fr;
+    align-content: center;
+    word-break: keep-all;
+    word-wrap: normal;
+}
+
+.list-two-rows
+{
+    grid-template-columns: 1fr 1fr;
 }
 
 /*
