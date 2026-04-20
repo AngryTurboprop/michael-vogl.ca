@@ -1,17 +1,192 @@
+/* The Big Backgroundski */
+
 .fixed-bg
 {
     background-image:url("/assets/images/pictures/DSC_9562.webp");
     background-size:cover;
 
     width: 100vw;
-    height: 70%;
+    height: 60vh;
 
     background-attachment: fixed;
-    background-position: 50% 90%;
+    background-position: 50% 100%;
     background-repeat: no-repeat;
     background-size: cover;       
 }
 
+.featured-card
+{
+    /* background: radial-gradient(500px 200px at 10% 15%, rgba(46, 125, 50, 0.14), transparent 60%), radial-gradient(500px 200px at 90% 20%, rgba(102, 187, 106, 0.16), transparent 65%), #ffffff;*/
+
+    border-radius: 18px;
+    border: 1px solid rgba(65, 61, 56, 0.14);
+    padding: 1.35rem 1.4rem;
+
+    max-width: 486px;
+    max-height: 370px;
+    height: 100%;
+    width: 486px;
+
+    gap: 16px;
+
+    font-family: "Roboto", sans-serif;
+    font-style: italic;
+
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 20%;
+    right:15vw;
+
+    overflow: hidden;
+
+    box-shadow: 1px 1px 16px rgb(0, 0, 0);
+
+    transition: box-shadow 0.2s ease-out;
+}
+
+.featured-card:hover
+{
+    box-shadow: 1px 1px 16px rgb(205, 205, 205);
+    filter: brightness(1.03);
+}
+
+.featured-card h3
+{
+    font-size: 1.6rem;
+    margin:0px;
+}
+
+.featured-card-image
+{
+    height: 100%;
+    width: 100%;
+    border-radius: 16px;
+
+    border: 1px solid rgba(206, 206, 206, 0.9);
+
+    background-origin: center;
+    background-position: center;
+
+    background-size: 100%;
+    transition: background-size 0.15s ease-out, filter 0.2s ease-out;
+}
+/*
+.featured-card-image:hover
+{
+    background-size: 120%; 
+}
+    */
+
+.featured-card-title
+{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.featured-card .featured-card-title span
+{
+    font-style: italic;
+    color: #434343;
+}
+
+.featured-card span
+{
+    font-style: normal;
+    font-weight: 500;
+}
+
+.featured-card-button
+{
+    padding: 16px;
+    border-radius: 16px;
+
+    box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.5);
+
+    border: 1px solid rgba(65, 61, 56, 0.05);
+    
+    font-style: normal;
+    font-weight: bolder;
+    text-align: center;
+
+    transition: filter 0.2s ease-out;
+    cursor: pointer;
+}
+
+.featured-card-button:hover
+{
+    filter: brightness(1.1);
+}
+
+.featured-card:before
+{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 5px;
+    border-radius: 999px;
+    
+
+    box-sizing: inherit;
+}
+
+.featured-card h4
+{
+    margin:0;
+}
+
+/* Coloured Feature Cards */
+/* Blue Cards */
+.card-orange.featured-card:before 
+{
+    background: linear-gradient(90deg, #feaf28, #e4cf31);
+}
+
+.card-orange.featured-card 
+{
+    background: radial-gradient(500px 200px at 10% 15%, rgba(230, 219, 0, 0.44), transparent 60%), radial-gradient(500px 200px at 90% 20%, rgba(239, 207, 3, 0.36), transparent 80%), #ffffff;
+}
+
+.card-orange .featured-card-button
+{
+    background: radial-gradient(circle at 20% 100%, rgb(255, 181, 44), #ffe942);
+}
+
+/* Green Cards */
+
+.card-green.featured-card:before 
+{
+    background: linear-gradient(90deg, #93e839, #3cb228);
+}
+
+.card-green.featured-card 
+{
+    background: radial-gradient(500px 200px at 10% 15%, rgba(119, 230, 0, 0.44), transparent 60%), radial-gradient(500px 200px at 90% 20%, rgba(156, 239, 3, 0.36), transparent 80%), #ffffff;
+}
+
+.card-green .featured-card-button
+{
+    background: radial-gradient(circle at 20% 100%, rgb(65, 208, 17), #8aff42);
+}
+
+/* Blue Cards */
+
+.card-blue.featured-card:before 
+{
+    background: linear-gradient(90deg, #71b6f3, #2387cf);
+}
+
+.card-blue.featured-card 
+{
+    background: radial-gradient(500px 200px at 10% 15%, rgba(0, 184, 230, 0.44), transparent 60%), radial-gradient(500px 200px at 90% 20%, rgba(3, 133, 239, 0.36), transparent 80%), #ffffff;
+}
+
+.card-blue .featured-card-button
+{
+    background: radial-gradient(circle at 20% 100%, rgb(80, 196, 255),rgb(55, 188, 255));
+}
 /* Main Body Stylings */
 .overlay-card
 {

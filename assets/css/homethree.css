@@ -9,6 +9,12 @@ body, header, footer, p, div > *
 
 /* Constants */
 
+html
+{
+    background-color: #2c2c2c;
+    color: #242424;
+}
+
 .content-width
 {
     width: 60vw !important;
@@ -19,6 +25,7 @@ body, header, footer, p, div > *
 header
 {
     box-shadow: 2px 2px 6px rgba(0, 0, 0, 0.281);
+    background-color: #FFFFFF;
 }
 
 body, main, html
@@ -64,12 +71,6 @@ footer
     padding-right: 8px;
 }
 
-.header-above a span
-{
-    bottom: -2px;
-    position: relative;
-}
-
 .v-bar
 {
     content:"";
@@ -107,21 +108,26 @@ footer
     align-items: center;
     background-color: transparent;
 
-    transition: color 0.1s linear, border-bottom 0.1s linear;
+    transition: box-shadow 0.15s ease-in, border-bottom 0.1s linear, margin-bottom 0.1s linear;
 
-    border-bottom: 6px solid rgba(0, 0, 0, 0);
+    border-bottom: 0px solid #fee022;
     margin-top: 6px;
+    margin-bottom: 6px;
 
     font-family: Helvetica, sans-serif;
     font-size: 1.1rem;
     letter-spacing: 0.05rem;
     font-weight: bold;
     color: black;
+
+    box-shadow: inset 0px -64px 64px -64px #ffffff00;
 }
 
 .header-navbar div:hover
 {
     border-bottom: 6px solid #fee022;
+    margin-bottom: 0px;
+    box-shadow: inset 0px -8px 8px -8px #fee022;
 }
 
 .header-logo, #header-logo
